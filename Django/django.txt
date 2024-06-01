@@ -1,0 +1,26 @@
+Lecture 3 - Django
+
+When a browser makes a request, it looks something like:
+GET / HTTP/1.1
+Host:www.example.com
+...
+
+When it receives a response, it looks something like:
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+Other Status Codes:
+301 Moved Permanently
+403 Forbidden
+404 Not Found
+500 Internal Server Error (server bug)
+
+https://docs.djangoproject.com/en/5.0/
+
+First thing:
+pip3 install Django
+
+django-admin startproject PROJECT_NAME
+Doing this creates a django
+python3 manage.py runserver
+python3 manage.py startapp APP_NAME
