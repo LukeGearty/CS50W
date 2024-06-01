@@ -1,0 +1,38 @@
+Lecture 2 - Python
+
+Variables:
+Unlike in C or Java, in Python, you do not need to specify the type of variable. They do have types, you just don’t need to specify.
+a = 28				int
+b = 1.5				float
+c = “Hello!”			str (string)
+d = True				bool (requires capitalized True or False)
+e = None				NoneType
+
+String concatenation:You can either concatenate using this method:“Here is a string “ + “ and here is another”
+
+Or if you have variables, you can do f strings
+name = “Luke”
+print(f”Hello {name}”)
+
+individual characters can be accessed by indexing
+name = “Brian”
+name[0] = “B”
+
+Data Structures:
+list = sequence of mutable values
+tuple = sequence of immutable values
+set - collection of unique values 
+dict - collection of key-value pairs
+
+names = ["Spider-Man", "Daredevil", "Luke Cage"]
+names[0] = “Spider-Man”
+names[0][0] = “S”
+
+Tuples: When you need to store things in pairs for example, (x,y)
+coordinate = (10.0, 20.0)
+
+Object Oriented Programming - we think about the world in terms of objects that store information and support the ability to perform operations
+
+def __init__ - the constructor 
+
+self - references the object itself
