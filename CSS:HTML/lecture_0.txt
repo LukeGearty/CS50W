@@ -1,0 +1,154 @@
+Lecture 0 - HTML and CSS
+
+HTML - Hypertext Markup Language
+Used to describe the text of the webpage
+
+<!DOCTYPE html> 
+This tells the web browser what version of html. This particular way is the way of saying this is written using HTML5
+
+<html lang=“en”>
+This is the beginning of the html content. </html> is the end. Everything in between is the  html content. ‘lang=“en”’ tells the page is written in English, used for search engines. 
+
+Inside of the html tag of the page:
+<head> 
+Describes information about the web page. The title for example. <title>Title here</title>
+
+<body>The visible part of the page
+
+Think of the structure of an HTML page as a tree-like structure : the Document Object Model. 
+
+Headings
+Ways of visually organizing text on a page
+<h1> all the way to <h6>
+
+Lists
+Ordered Lists:
+1. This
+2. Is
+3. What it looks like
+Needs an <ol> tag, and within <ol></ol> there must be <li> to indicate the individual items
+
+Unordered Lists:
+- [ ] For
+- [ ] Bulletpoints
+Needs an <ul> tag, and the <li> tag within for the indiviudal items
+
+Image
+When you display an image, you need to specify what particular image
+src is used to link the image
+alt is alternative text, which is used if, for whatever reason, the image does not display (or if someone is using a screen reader), then there will be some kind of alternative text that describes the image
+Can set size for the image using height and width
+
+Links
+<a href> Is used to link pages together
+<a href=“https:://www.google.com>Click here</a>
+for a link to Google
+
+Table
+<table></table> for the entire table
+<thead>
+Is for the head 
+<th> is for table headings
+<tbody> is for the body
+
+Form
+Anytime a user can provide information, we call that a form
+
+CSS - Cascading Style Sheet
+Takes an HTML page and tells the browser how we want it to appear
+Fonts, colors, styling
+Can be done in a number of ways. using style in the html tag.
+
+You can use the style element:
+<style>
+        h1 {
+            color:blue;
+            text-align: center;
+        } 
+</style>
+
+or you can link to a separate css style, and in the <head> tag, you can do something like this:
+<link rel=“stylesheet” href=“styles.css”>
+
+One of the most powerful tools for CSS is to control the size of an element
+
+<div> tag in HTML is like a division of the page, it makes it easier to divide and break up the page and reference it later.
+
+Padding in CSS adds a little bit of space inside of an element
+Margin adds space outside of the element
+
+fonts
+font-family. You can specify fonts and backups if that font isn’t supported on a browser
+Font-size
+Font-weight: bold for example
+
+Borders:
+You can use borders on elements to add a box like border
+
+When there is a little redundancy (code appearing multiple times), in CSS you can use multiple selectors
+
+th,td {
+            border: 1px solid black;
+        }
+
+
+If you have multiple tags of the same type (ex: <h1>), you can select only one of them in the following ways
+1. Inline styling in the HTML doc - not the best option
+2. You can give headings unique names using ID, and then target that in the css
+for example: <h1 id=“foo”>Heading 1</h1>
+Then in CSS you would do something like:
+#foo {
+            color: blue;
+        }
+
+You don’t want to add IDs unnecessarily. There should be only 1 ID. If you want to give a unique name to multiple HTML elements, you give them a class.
+<h1 class=“cla”>Heading 2</h1>
+<h1 class = “cla>Heading 3</h1>
+
+Then in CSS you would do something like:
+.cla {
+	color: red;
+	} 
+
+SpecificityWhen there are multiple ways of selecting an element, by element name, class, ID, there may be conflicts. There is a hierarchy of specificity.
+
+1. Inline
+2. ID
+3. class
+4. type
+
+
+Selectors
+Descendant: Used to select all descendants of an element.
+Child: using the > to select the direct children of an element
+Attribute selector
+Pseudoclass: Under a certain condition, like someone hovering over a link
+button {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            background-color: green;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+Responsive Design
+Viewport
+Is it a laptop? Tablet? Phone? 
+We ideally want the web page to adapt to different mediums
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Media Queries
+Ways of finetunning how page will look on different types of screens
+
+Flexbox and Grid are two powerful libraries to ensure that we can do responsive design
+
+BootstrapA library containing prewritten CSS 
+https://getbootstrap.com
+Bootstrap can also be mobile responsive
+
+Sass
+Extension of CSS, can include variables. It is a .scss file.
+Sass requires compilation to run, as browser understand css and not scss. 
