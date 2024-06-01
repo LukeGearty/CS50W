@@ -1,0 +1,37 @@
+Lecture 1 - Git
+Git is a way to keep track of changes to code
+Allows us to synchronize code between an entire team
+Stores a repository online and anytime there are changes made, the server with the files is updated. Test changes to code without committing them.
+Can revert back to older versions of the code. 
+
+GitHub - a website that stores repositories (the folder with the code and all the files related to the code)
+
+
+git clone - a way to take a repository from the internet and put it on your machine
+git clone <url>
+Methods of authentication: HTTPS, or SSH
+
+git commit - takes a snapshot of the current state
+git add - adds a file so that it is added to be tracked
+
+git add <file name>
+
+git commit -m “you can include a message in this commit. It is helpful for keeping track of what you did”
+
+git status - tells you what is currently happening in the repository
+
+git push - whatever changes are made are pushed to GitHub
+
+git pull - take the changes that currently exist on github and pulls it down to your machine
+
+Merge Conflicts
+When trying to merge two different sets of changes. There needs to be some kind of way to resolve them.
+Every commit gets a hash to identify the commit
+
+git log - logged for every commit, useful to see who added what
+
+Branching - working on different parts of the repository at the same time
+
+git branch - to see all the branches
+
+git checkout -b <branch name> - to create a new branch
