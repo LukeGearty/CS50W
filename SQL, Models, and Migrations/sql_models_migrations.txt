@@ -1,0 +1,76 @@
+Data
+In a relational database, we store data in a table
+
+Database Management Systems: MySQL, PostgreSQL, SQLite
+
+SQL has types, like Python has variable types
+
+SQLite Types:
+Text, Numeric, Integer, Real, Blob (Binary Large Object)
+
+MySQL Types:
+Char (size)
+Varchar (size) - the argument here is up to the size argument
+Smallint
+int
+Float
+Double
+...
+
+In SQLite:
+CREATE TABLE flights (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    origin TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    duration INTEGER NOT NULL
+);
+The syntax for creating a table called flights
+
+Constraints we can add to each column:
+Check, Default, Not Null, Primary Key, Unique
+These constraints ensure data that is added to the table obeys certain rules
+
+INSERT - inserts data into a table
+Ex:
+INSERT INTO flights 
+    (origin, destination, duration)
+    VALUES ("New York", "London", 415);
+
+SELECT - retrieves data from a table
+Ex:
+SELECT * FROM flights; - this means select all from the table flights
+SELECT origin, destination FROM flights;
+SELECT * flights WHERE id = 3;
+SELECT * FROM flights WHERE origin LIKE %a%; - looks inside the flights table and if there is an 'a' in the origin column, it will return this.
+
+Functions:
+Average, Count, Max, Min, Sum
+
+Update - to change the data
+Update flights
+    SET duration = 430
+    WHERE origin = "New York"
+    AND destination = "London";
+
+Delete - delete data
+
+Joining Tables
+There may be multiple tables that have different relationships
+In the flight example:
+Passengers on certain flights, airports at different cities, example
+To join all these tables, there is the JOIN keyword
+Inner Join
+Left Outer Join
+Right Outer Join
+Full Outer Join
+
+SQL Injection - A security vulnerability
+Ex:
+A website that has a number of users, you may store that in a database
+Someone types in a username and password, it executes a SQL command
+SELECT * FROM users WHERE username = "username" AND password = "password"
+Someone can enter something like:
+SELECT * FROM users WHERE username = "hacker"--" AND password = "";
+-- is a comment, and it will ignore the rest of the command
+One strategy is to add a higher level of abstraction on top of SQL
+
